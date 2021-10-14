@@ -114,7 +114,11 @@ textarea {
   }
   .leftCarou{
     right:100%;
-    transition: right 2s;
+    transition: right 2s ease-out;
+  }
+  .rightCarou{
+    left:100%;
+    transition: left 2s ease-out;
   }
   #carouContainer{
     height:60vh;
