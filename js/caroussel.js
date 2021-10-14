@@ -13,16 +13,18 @@ let pic4 = "../img/house/house4.jpg";
 let carrousselPics = [pic0,pic1,pic2,pic3,pic4];
 let index = 0;
 let timer = "5000";
-
+let canBePressed = true;
 // ---------------------------Logic------------------------
 carrousselPic.src =  pic0; // set picture to start page with carroussel content
-let interval = setInterval(function(){updateCarroussel(-1)},timer);
+let interval = setInterval(function(){updateCarroussel(1)},timer);
 
 function updateCarroussel(num){ // use num arg to choose if you want to increase set it to 1, to decrease set to -1 or 0 to stop the carrousselPics index
     if (num > 1 || num < -1){
         console.error("Wrong parameters UpdateCarroussel only accept 1 or -1");
         return;
     }
+    canBePressed = false;
+    if (carrousselContainer.childElementCount > 1) {carrousselContainer.removeChild(carrousselContainer.lastChild);}
     index += num;
     (index >= carrousselPics.length && num > 0) ? index = 0:
     (index < 0 && num < 0) ? index = carrousselPics.length-1: index; // Reset index
@@ -35,17 +37,23 @@ function updateCarroussel(num){ // use num arg to choose if you want to increase
     },1); // Must use a timeout or the transition doesn't trigger i don't know why
     setTimeout(function(){
         carrousselPic.src = carrousselPics[index];
-        carrousselContainer.removeChild(carrousselContainer.lastChild);
-    },2000); // when transition is over replace background pic by new one set time out to CSS transition's duration
+        canBePressed = true;
+    },2000); // when transition is over replace background pic by new one .set time out to CSS transition's duration
 }
 
 btnLeft.addEventListener("click",function(){
+    if (canBePressed){
+    canBePressed = false;
     updateCarroussel(-1);
     clearInterval(interval);
     interval = setInterval(function(){updateCarroussel(-1)},timer);
+}
 });
 btnRight.addEventListener("click",function(){
+    if (canBePressed){
+    canBePressed = false;
     updateCarroussel(1);
     clearInterval(interval);
     interval = setInterval(function(){updateCarroussel(-1)},timer);
+}
 });
