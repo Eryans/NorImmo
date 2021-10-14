@@ -99,6 +99,27 @@ textarea {
     height: 100px;
     margin-top: 1em;
   }
+  
+  /* --------------- Jules CSS---------------------*/
+  #textDescription{
+    background-color: rgba(0,0,0,0.5);
+  }
+  .btn:focus{
+    box-shadow: none !important;
+  }
+  #btnLeft,#btnRight{
+    background-color: rgba(0,0,0,0.5);
+  }
+  .carouClass{
+    max-height: 60vh;
+  }
+  .leftCarou{
+    right:100%;
+    transition: right 2s;
+  }
+  #carouContainer{
+    height:60vh;
+  }
 /* ==========================================================================
    Helper classes
    ========================================================================== */

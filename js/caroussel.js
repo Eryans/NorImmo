@@ -1,5 +1,6 @@
 // --------------------------Dom---------------------------
 let carrousselPic = document.querySelector("#carrousselPic");
+let carrousselContainer = document.querySelector("#carouContainer");
 const btnRight = document.querySelector("#btnRight");
 const btnLeft = document.querySelector("#btnLeft");
 
@@ -7,7 +8,9 @@ const btnLeft = document.querySelector("#btnLeft");
 let pic0 = "../img/house/house0.jpg";
 let pic1 = "../img/house/house1.jpg";
 let pic2 = "../img/house/house2.jpg";
-let carrousselPics = [pic0,pic1,pic2];
+let pic3 = "../img/house/house3.jpg";
+let pic4 = "../img/house/house4.jpg";
+let carrousselPics = [pic0,pic1,pic2,pic3,pic4];
 let index = 0;
 let timer = "3000";
 
@@ -20,10 +23,18 @@ function updateCarroussel(num){ // use num arg to choose if you want to increase
         console.error("Wrong parameters UpdateCarroussel only accept 1 or -1");
         return;
     }
+    if (carrousselContainer.childElementCount > 1) {carrousselContainer.removeChild(carrousselContainer.lastChild)}
     index += num;
     (index >= carrousselPics.length && num > 0) ? index = 0:
     (index < 0 && num < 0) ? index = carrousselPics.length-1: index; // Reset index
-    carrousselPic.src = carrousselPics[index];
+    let newImg = document.createElement("img");
+    newImg.src = carrousselPics[index];
+    newImg.classList.add("carouClass","col-12","position-absolute","leftCarou");
+    carrousselContainer.appendChild(newImg);
+    newImg.style.right = "0";
+    /* carrousselPic.src = carrousselPics[index];
+    carrousselPic2.src = carrousselPics[index];
+    carrousselPic3.src = carrousselPics[index]; */
 }
 
 btnLeft.addEventListener("click",function(){

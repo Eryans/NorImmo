@@ -31,7 +31,7 @@
     <header class="container-fluid bg-primary text-white">
       <section class="row p-3 col-sm-8 col-lg-5">
         <h1>NorImmo</h1>
-        <p>
+        <p class="d-none d-sm-block">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
           praesentium harum illo tenetur voluptas culpa iure, voluptates,
           inventore explicabo dolores, eos minus eligendi! Itaque, eaque nulla.
@@ -48,7 +48,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Acceuil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="estimation.html">Votre Maison</a>
@@ -71,19 +71,24 @@
       <h2>Les réalisations NorImmo</h2>
       <!-------------------------Caroussel----------------------------->
       <section class="row my-3 justify-content-center">
-          <figure class="my-3 col-12 p-0 position-relative">
-            <img id="carrousselPic"class="col-12 h-50 p-auto" src="https://picsum.photos/1000/1000" alt="">
-            <button id="btnLeft" class="px-1 btn btn-primary position-absolute start-0" style="top:25%;">Left</button> 
-            <button id="btnRight" class="px-1 btn btn-primary position-absolute end-0" style="top:25%;">Right</button>
-            <section id="textDescription" class=" bg-black position-absolute text-white">
+          <section class="my-3 col-12 p-0 position-relative">
+            <div id="carouContainer" class="position-relative">
+				<img id="carrousselPic" class="carouClass col-12 p-auto position-absolute" src="https://picsum.photos/1000/1000" alt="Pictures of house">
+			</div>
+            <button id="btnLeft" class="px-1 btn text-white position-absolute top-50 start-0 fs-1 btnCarroussel"><</button> 
+            <button id="btnRight" class="px-1 btn text-white position-absolute top-50 end-0 fs-1 btnCarroussel">></button>
+            <section id="textDescription" class="col-12 position-absolute text-white bottom-0">
               <h3>Blabla</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              <p class="d-none d-sm-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 Illum voluptatum accusantium neque nihil dolorum, 
                 consectetur voluptate et dolor sit id libero sapiente quidem ad doloribus? 
                 Dolorem ab aliquam sapiente nobis.</p>
             </section> 
-          </figure>
-        </div>
+          </section>
+		  <section class="row">
+			<h1>NorImmo, l'entreprise pour <span class="text-decoration-underline">votre maison !</span></h1>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus corrupti fuga mollitia ducimus fugit veniam! Ratione veritatis ipsam eaque necessitatibus voluptate aut earum, facere, repellat corrupti, quisquam est id debitis!</p>
+		  </section>
     </main>
     <footer class="container-fluid bg-dark text-white">
       <section class="row">
