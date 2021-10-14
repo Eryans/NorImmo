@@ -12,7 +12,7 @@ let pic3 = "../img/house/house3.jpg";
 let pic4 = "../img/house/house4.jpg";
 let carrousselPics = [pic0,pic1,pic2,pic3,pic4];
 let index = 0;
-let timer = "3000";
+let timer = "5000";
 
 // ---------------------------Logic------------------------
 carrousselPic.src =  pic0; // set picture to start page with carroussel content
@@ -23,18 +23,20 @@ function updateCarroussel(num){ // use num arg to choose if you want to increase
         console.error("Wrong parameters UpdateCarroussel only accept 1 or -1");
         return;
     }
-    if (carrousselContainer.childElementCount > 1) {carrousselContainer.removeChild(carrousselContainer.lastChild)}
     index += num;
     (index >= carrousselPics.length && num > 0) ? index = 0:
     (index < 0 && num < 0) ? index = carrousselPics.length-1: index; // Reset index
     let newImg = document.createElement("img");
     newImg.src = carrousselPics[index];
-    newImg.classList.add("carouClass","col-12","position-absolute","leftCarou");
+    num > 0 ? newImg.classList.add("carouClass","col-12","position-absolute","leftCarou") : newImg.classList.add("carouClass","col-12","position-absolute","rightCarou");
     carrousselContainer.appendChild(newImg);
-    newImg.style.right = "0";
-    /* carrousselPic.src = carrousselPics[index];
-    carrousselPic2.src = carrousselPics[index];
-    carrousselPic3.src = carrousselPics[index]; */
+    setTimeout(function(){
+        num > 0 ? newImg.style.right = "0" : newImg.style.left = "0" ;
+    },1); // Must use a timeout or the transition doesn't trigger i don't know why
+    setTimeout(function(){
+        carrousselPic.src = carrousselPics[index];
+        carrousselContainer.removeChild(carrousselContainer.lastChild);
+    },2000); // when transition is over replace background pic by new one set time out to CSS transition's duration
 }
 
 btnLeft.addEventListener("click",function(){
