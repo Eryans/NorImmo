@@ -98,8 +98,7 @@ textarea {
     background-color: coral;
     height: 100px;
     margin-top: 1em;
-  }
-  
+  } 
   /* --------------- Jules CSS---------------------*/
   #textDescription{
     background-color: rgba(0,0,0,0.5);
@@ -120,6 +119,17 @@ textarea {
   #carouContainer{
     height:60vh;
   }
+/* ------------------ Hugo ------------------------ */
+/* -----------Estimation------------------------*/
+
+#inputSurface, #room, #material, #price-box{
+  width: auto;
+}
+
+#title-estimate {
+  margin: 1em 0 3em 0;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
