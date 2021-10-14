@@ -86,7 +86,19 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+  .fond{
+    background-color: rgb(15, 59, 255);
+  }
+   .form-control:focus{
+    box-shadow: none;
+    border: 1px solid #d8dde2;
+  }
+   #test, #messageCount{
+    border: 1px solid black;
+    background-color: coral;
+    height: 100px;
+    margin-top: 1em;
+  }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
