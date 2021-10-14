@@ -1,3 +1,5 @@
+// Carroussel JavaScript code written by Jules Noir--Vermeulen :D
+
 // --------------------------Dom---------------------------
 let carrousselPic = document.querySelector("#carrousselPic");
 let carrousselContainer = document.querySelector("#carouContainer");
@@ -20,11 +22,10 @@ let interval = setInterval(function(){updateCarroussel(1)},timer);
 
 function updateCarroussel(num){ // use num arg to choose if you want to increase set it to 1, to decrease set to -1 or 0 to stop the carrousselPics index
     if (num > 1 || num < -1){
-        console.error("Wrong parameters UpdateCarroussel only accept 1 or -1");
+        console.error("Wrong parameters UpdateCarroussel only accept 1, 0 or -1");
         return;
     }
-    canBePressed = false;
-    if (carrousselContainer.childElementCount > 1) {carrousselContainer.removeChild(carrousselContainer.lastChild);}
+    canBePressed = false; // Make button unusable to prevent graphic bug
     index += num;
     (index >= carrousselPics.length && num > 0) ? index = 0:
     (index < 0 && num < 0) ? index = carrousselPics.length-1: index; // Reset index
@@ -34,26 +35,23 @@ function updateCarroussel(num){ // use num arg to choose if you want to increase
     carrousselContainer.appendChild(newImg);
     setTimeout(function(){
         num > 0 ? newImg.style.right = "0" : newImg.style.left = "0" ;
-    },1); // Must use a timeout or the transition doesn't trigger i don't know why
+    },10); // Must use a timeout or the transition doesn't trigger i don't know why and google refuse to help me
     setTimeout(function(){
         carrousselPic.src = carrousselPics[index];
-        canBePressed = true;
+        canBePressed = true; // Make button usable again when animation is over
+        carrousselContainer.removeChild(carrousselContainer.lastChild); // Remove container child to avoid image overlap and html overage
     },2000); // when transition is over replace background pic by new one .set time out to CSS transition's duration
 }
-
 btnLeft.addEventListener("click",function(){
-    if (canBePressed){
-    canBePressed = false;
-    updateCarroussel(-1);
-    clearInterval(interval);
-    interval = setInterval(function(){updateCarroussel(-1)},timer);
-}
+    btnEvent(-1);
 });
 btnRight.addEventListener("click",function(){
-    if (canBePressed){
-    canBePressed = false;
-    updateCarroussel(1);
-    clearInterval(interval);
-    interval = setInterval(function(){updateCarroussel(-1)},timer);
-}
+    btnEvent(1);
 });
+function btnEvent(n){
+    if (canBePressed){
+        updateCarroussel(n);
+        clearInterval(interval);
+        interval = setInterval(function(){updateCarroussel(-1)},timer);
+    }
+}

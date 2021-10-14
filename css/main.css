@@ -113,12 +113,12 @@ textarea {
     max-height: 60vh;
   }
   .leftCarou{
-    right:100%;
-    transition: right 2s ease-out;
+    right:120%;
+    transition: right 2s ease-in-out;
   }
   .rightCarou{
-    left:100%;
-    transition: left 2s ease-out;
+    left:120%;
+    transition: left 2s ease-in-out;
   }
   #carouContainer{
     height:60vh;
