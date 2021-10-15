@@ -19,9 +19,9 @@ let index = 0;
 let timer = "5000";
 let canBePressed = true;
 // ---------------------------Logic------------------------
-carrousselPic.src =  carrousselPics[0][0]; // set picture to start page with carroussel content
-title.innerText = carrousselPics[0][1];
-description.innerText = carrousselPics[0][2];
+carrousselPic.src =  carrousselPics[index][0]; // set picture to start page with carroussel content
+title.innerText = carrousselPics[index][1];
+description.innerText = carrousselPics[index][2];
 let interval = setInterval(function(){updateCarroussel(1)},timer);
 
 function updateCarroussel(num){ // use num arg to choose if you want to increase set it to 1, to decrease set to -1 or 0 to stop the carrousselPics index
@@ -31,8 +31,7 @@ function updateCarroussel(num){ // use num arg to choose if you want to increase
     }
     canBePressed = false; // Make button unusable to prevent graphic bug
     index += num;
-    (index >= carrousselPics.length && num > 0) ? index = 0:
-    (index < 0 && num < 0) ? index = carrousselPics.length-1: index; // Reset index
+    (index >= carrousselPics.length && num > 0) ? index = 0 : (index < 0 && num < 0) ? index = carrousselPics.length-1: index; // Reset index
     title.style.opacity = 0;
     description.style.opacity = 0;
     let newImg = document.createElement("img");
@@ -41,7 +40,7 @@ function updateCarroussel(num){ // use num arg to choose if you want to increase
     carrousselContainer.appendChild(newImg);
     setTimeout(function(){
         num > 0 ? newImg.style.right = "0" : newImg.style.left = "0" ;
-    },100); // Must use a timeout or the transition doesn't trigger i don't know why and google refuse to help me
+    },50); // Must use a timeout or the transition doesn't trigger i don't know why and google refuse to help me
     setTimeout(function(){
         carrousselPic.src = carrousselPics[index][0];
         title.innerText = carrousselPics[index][1];
