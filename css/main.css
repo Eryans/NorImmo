@@ -97,7 +97,7 @@ textarea {
     margin-bottom: 1em;
     font-size: small;
     color: red;
-
+   }
    #test, #messageCount{
     border: 1px solid black;
     background-color: coral;
