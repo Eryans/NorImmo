@@ -9,11 +9,11 @@ const title = document.querySelector("#picTitle");
 const description = document.querySelector("#picText");
 
 // --------------------------ImgArray----------------------
-let pic0 = ["./img/house/house0.jpg","Maison 1","Lorem blabla1"];
-let pic1 = ["./img/house/house1.jpg","Maison 2","Lorem blabla2"];
-let pic2 = ["./img/house/house2.jpg","Maison 3","Lorem blabla3"];
-let pic3 = ["./img/house/house3.jpg","Maison 4","Lorem blabla4"];
-let pic4 = ["./img/house/house4.jpg","Maison 5","Lorem blabla5"];
+let pic0 = ["img/house/house0.jpg","Maison 1","Lorem blabla1"];
+let pic1 = ["img/house/house1.jpg","Maison 2","Lorem blabla2"];
+let pic2 = ["img/house/house2.jpg","Maison 3","Lorem blabla3"];
+let pic3 = ["img/house/house3.jpg","Maison 4","Lorem blabla4"];
+let pic4 = ["img/house/house4.jpg","Maison 5","Lorem blabla5"];
 let carrousselPics = [pic0,pic1,pic2,pic3,pic4];
 let index = 0;
 let timer = "5000";
