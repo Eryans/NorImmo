@@ -110,7 +110,7 @@ textarea {
     background-color: rgba(0,0,0,0.5);
   }
   .carouClass{
-    max-height: 60vh;
+    height: 60vh; /* DO NOT TOUCH OR IT WILL BREAK THE CAROUSEL */
   }
   .leftCarou{
     right:120%;
@@ -121,7 +121,7 @@ textarea {
     transition: left 2s ease-in-out;
   }
   #carouContainer{
-    height:60vh;
+    height:60vh; /* DO NOT TOUCH OR IT WILL BREAK THE CAROUSEL */
   }
   #picTitle,#picText{
     transition: opacity 1s;
