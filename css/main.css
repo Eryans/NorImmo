@@ -123,6 +123,9 @@ textarea {
   #carouContainer{
     height:60vh;
   }
+  #picTitle,#picText{
+    transition: opacity 1s;
+  }
 /* ------------------ Hugo ------------------------ */
 /* -----------Estimation------------------------*/
 
