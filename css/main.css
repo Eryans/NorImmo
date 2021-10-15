@@ -91,12 +91,64 @@ textarea {
     box-shadow: none;
     border: 1px solid #d8dde2;
   }
+
    #test, #messageCount, #phoneError{
     height: 1vh;
     margin-bottom: 1em;
     font-size: small;
     color: red;
+
+   #test, #messageCount{
+    border: 1px solid black;
+    background-color: coral;
+    height: 100px;
+    margin-top: 1em;
+  } 
+  /* --------------- Jules CSS---------------------*/
+  #textDescription{
+    background-color: rgba(0,0,0,0.5);
+
   }
+  .btn:focus{
+    box-shadow: none !important;
+  }
+  #btnLeft,#btnRight{
+    background-color: rgba(0,0,0,0.5);
+  }
+  .carouClass{
+    height: 60vh; /* DO NOT TOUCH OR IT WILL BREAK THE CAROUSEL */
+  }
+  .leftCarou{
+    right:120%;
+    transition: right 2s ease-in-out;
+  }
+  .rightCarou{
+    left:120%;
+    transition: left 2s ease-in-out;
+  }
+  #carouContainer{
+    height:60vh; /* DO NOT TOUCH OR IT WILL BREAK THE CAROUSEL */
+  }
+  #picTitle,#picText{
+    transition: opacity 1s;
+  }
+/* ------------------ Hugo ------------------------ */
+/* -----------Estimation------------------------*/
+
+#inputSurface, #room, #material, #price-box{
+  width: auto;
+}
+
+#title-estimate {
+  margin: 1em 0 3em 0;
+}
+
+/* -----------------  F.A.Q -------------------- */
+
+.to-reveal {
+  display: none;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
