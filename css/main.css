@@ -96,6 +96,13 @@ textarea {
     margin-bottom: 1em;
     font-size: x-small;
     color: red;
+   }
+   #test, #messageCount{
+    border: 1px solid black;
+    background-color: coral;
+    height: 100px;
+    margin-top: 1em;
+  } 
   /* --------------- Jules CSS---------------------*/
   #textDescription{
     background-color: rgba(0,0,0,0.5);
