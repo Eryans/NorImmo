@@ -69,11 +69,10 @@
     </nav>
 
     <!-- MAIN FORM -->
-   
-<main class="container-fluid"></main>
+<main class="container"></main>
 
     <form name="contactForm" class="container">
-      <div class="row fond">
+      <div class="row">
       
       <!-- firstname + name -->
         <div class="col-6 mt-3">
@@ -82,37 +81,37 @@
         <div class="col-6 mt-3">
           <input type="text" class="form-control" placeholder="Nom" id="lastName" aria-label="Last name">
         </div>
-        <div class="col-12" ><p id="test"></p></div>
-      
+        <div class="col-6" ><p id="firstNameTxt"></p></div>
+        <div class="col-6" ><p id="lastNameTxt"></p></div>
         <!-- phone number -->
         <div class="col-12">
           <label for="formGroupExampleInput" class="form-label">Téléphone :</label>
           <input type="text" class="form-control" id="phone"  placeholder="00.00.00.00.00">
         </div>
         <div class="col-12" ><p id="phoneError"></p></div>
-
         <!-- object -->
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Motif contact :</option>
-          <option value="1">Devis</option>
-          <option value="2">Information</option>
-          <option value="3">Réclamation</option>
-        </select>  
-
+        <div class="d-flex justify-content-center mb-3">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Motif contact :</option>
+            <option value="1">Devis</option>
+            <option value="2">Information</option>
+            <option value="3">Réclamation</option>
+          </select>  
+        </div>
         <!-- message -->
         <div class="form-floating">
           <textarea class="form-control" id="message" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px"></textarea>
           <label for="floatingTextarea2">Message</label>
         </div>
         <div class="col-12" ><p id="messageCount"></p></div>
-
         <!-- button -->
-        <button  class="btn btn-primary"id="submit">Envoyer</button>
+        <div class="d-flex justify-content-center mb-3">
+          <button  class="btn btn-primary"id="submit">Envoyer</button>
+        </div>
 
       </div>
     </form>  
   </main>
-
 
     <!-- FOOTER -->
     <footer class="container-fluid bg-dark text-white">
