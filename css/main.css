@@ -87,15 +87,14 @@ textarea {
    Author's custom styles
    ========================================================================== */
   
-   .form-control:focus{
+  .form-control:focus{
     box-shadow: none;
     border: 1px solid #d8dde2;
   }
-
-   #test, #messageCount, #phoneError{
-    height: 1vh;
+  #firstNameTxt, #lastNameTxt, #phoneError, #messageCount{
+    height: 2vh;
     margin-bottom: 1em;
-    font-size: small;
+    font-size: x-small;
     color: red;
    }
    #test, #messageCount{
