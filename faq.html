@@ -67,7 +67,7 @@
         </div>
       </div>
     </nav>
-    <main class="my-5">
+    <main class="m-5 panneau">
       <h2 class="text-center mt-5">La foire aux questions</h2><br>
       <section class="container d-grid gap-5 my-5">
         <button class="p-2 bg-light border rounded-pill question-list my-1" id="question-a">
@@ -86,17 +86,20 @@
  
     </main>
 
-
-    <footer class="container-fluid row mx-auto bg-dark text-white mt-5">
+    <!-------------------------Footer-------------------------->
+    <footer id="pelouse" class="container-fluid row mx-auto text-white mt-5">
+      <section class="row justify-content-center panneau my-3 p-0">
         <h2 class="text-center fs-6 m-auto mt-1">Mentions légales</h2>
         <div class="d-flex justify-content-center mt-1">
         <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 16 16" height="16px" viewBox="0 0 24 24" width="16px" fill="white">
           <rect fill="none" height="24" width="24" x="0"/><path d="M11.88,9.14c1.28,0.06,1.61,1.15,1.63,1.66h1.79c-0.08-1.98-1.49-3.19-3.45-3.19C9.64,7.61,8,9,8,12.14 c0,1.94,0.93,4.24,3.84,4.24c2.22,0,3.41-1.65,3.44-2.95h-1.79c-0.03,0.59-0.45,1.38-1.63,1.44C10.55,14.83,10,13.81,10,12.14 C10,9.25,11.28,9.16,11.88,9.14z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8 s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z"/>
         </svg>
         <p class="d-inline">2021</p>
-      </div>
+            </div>
+      </section>
+      <section class="row">
         <div class="col-4">
-          <ul class="list-unstyled">
+          <ul class="list-unstyled panneau p-1">
             <li class="mb-1 text-decoration-underline text-md-center">Chef de Projet:</li>
             <li class="text-md-center">Jules Noir</li><br>
             <li class="mb-1 text-decoration-underline text-md-center">Collaborateurs:</li>
@@ -105,13 +108,13 @@
           </ul>
         </div>
         <div class="col-4">
-          <ul class="list-unstyled mt-md-3">
+          <ul class="list-unstyled mt-md-3 panneau p-1">
             <li class="text-center">NorImmo</li>
             <li class="text-center">Agence immobilière</li><br>
             <li class="text-center fw-bold"><a href="contact.html" style="text-decoration: none underline; color: white;">Nous contactez</a></li>
           </ul>
         </div>
-        <div class="col-4 d-flex flex-row mb-4 justify-content-md-evenly align-items-md-start">
+        <div class="col-4 d-flex flex-row mb-4 justify-content-md-evenly align-items-md-start panneau p-1">
           <button style="border: none; background-color: inherit;" onclick="getTwitLinks()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="white" class="bi bi-twitter" viewBox="0 0 16 16">
               <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
@@ -143,7 +146,8 @@
             </p>
           </button>
         </div>
-    </footer>
+      </section>
+  </footer>
 
 
 
