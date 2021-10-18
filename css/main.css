@@ -98,6 +98,31 @@ textarea {
     color: red;
    }
   /* --------------- Jules CSS---------------------*/
+  nav{
+    background-image: url(../img/goutiere.png);
+    background-repeat: repeat-x;
+  }
+  #pelouse{
+    background-color: rgb(111, 223, 60);
+  }
+  .panneau{
+    background-image: url(../img/wooden.png);
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    color: white;
+  }
+  .bg-paint{
+    background-image: url(../img/paint-roller.png);
+    background-repeat: no-repeat;
+    background-size: 110% 100%;
+    background-position-x: -1em;
+  }
+  body{
+    background-image: url(../img/BrickWall.jpg);
+  }
+  main{
+    min-height: 80vh;
+  }
   #textDescription{
     background-color: rgba(0,0,0,0.5);
 
@@ -121,6 +146,7 @@ textarea {
   }
   #carouContainer{
     height:60vh; /* DO NOT TOUCH OR IT WILL BREAK THE CAROUSEL */
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
   }
   #picTitle,#picText{
     transition: opacity 1s;
