@@ -12,5 +12,6 @@ $(document).ready(function(){
     $('#question-c').click(function(){
         $('#to-reveal-c').toggle('slow');
     });
-    
 });
+
+

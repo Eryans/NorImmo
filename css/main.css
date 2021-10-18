@@ -97,13 +97,32 @@ textarea {
     font-size: x-small;
     color: red;
    }
-   #test, #messageCount{
-    border: 1px solid black;
-    background-color: coral;
-    height: 100px;
-    margin-top: 1em;
-  } 
   /* --------------- Jules CSS---------------------*/
+  nav{
+    background-image: url(../img/goutiere.png);
+    background-repeat: repeat-x;
+  }
+  #pelouse{
+    background-color: rgb(111, 223, 60);
+  }
+  .panneau{
+    background-image: url(../img/wooden.png);
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    color: white;
+  }
+  .bg-paint{
+    background-image: url(../img/paint-roller.png);
+    background-repeat: no-repeat;
+    background-size: 110% 100%;
+    background-position-x: -1em;
+  }
+  body{
+    background-image: url(../img/BrickWall.jpg);
+  }
+  main{
+    min-height: 80vh;
+  }
   #textDescription{
     background-color: rgba(0,0,0,0.5);
 
@@ -127,6 +146,7 @@ textarea {
   }
   #carouContainer{
     height:60vh; /* DO NOT TOUCH OR IT WILL BREAK THE CAROUSEL */
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
   }
   #picTitle,#picText{
     transition: opacity 1s;
@@ -148,16 +168,18 @@ textarea {
   display: none;
 }
 
-/* .to-reveal-transition {
-  transition: all 10s linear;
-} */
-
 #to-reveal-a, #to-reveal-b, #to-reveal-c {
   padding: .5em;
 }
 
 footer { /* FOOTER GLOBAL CSS */
   font-size: 69%;
+}
+
+.links-style {
+  color: white;
+  text-decoration: underline;
+  /* cursor: inherit; */
 }
 
 /* ==========================================================================
