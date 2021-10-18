@@ -1,10 +1,16 @@
 
-let btns = document.getElementsByClassName("question-list");
+$(document).ready(function(){
 
-for (let btn of btns){
-    btn.onclick = function(){
-       this.lastElementChild.classList.toggle("to-reveal");
-   }
-}
+    $('#question-a').click(function(){
+        $('#to-reveal-a').toggle('slow');
+    });
 
+    $('#question-b').click(function(){
+        $('#to-reveal-b').toggle('slow');
+    });
 
+    $('#question-c').click(function(){
+        $('#to-reveal-c').toggle('slow');
+    });
+    
+});

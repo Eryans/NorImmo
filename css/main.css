@@ -148,6 +148,14 @@ textarea {
   display: none;
 }
 
+/* .to-reveal-transition {
+  transition: all 10s linear;
+} */
+
+#to-reveal-a, #to-reveal-b, #to-reveal-c {
+  padding: .5em;
+}
+
 footer { /* FOOTER GLOBAL CSS */
   font-size: 69%;
 }
