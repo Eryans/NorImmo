@@ -199,6 +199,11 @@ nav form {
   margin-top: .5em;
 }
 
+.btn-form {
+  background-color: rgb(48, 201, 48);
+  border: none;
+}
+
 /* -----------Estimation------------------------*/
 
 #inputSurface, #room, #material, #price-box{
