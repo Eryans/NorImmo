@@ -168,8 +168,18 @@ textarea {
   display: none;
 }
 
+#to-reveal-a, #to-reveal-b, #to-reveal-c {
+  padding: .5em;
+}
+
 footer { /* FOOTER GLOBAL CSS */
   font-size: 69%;
+}
+
+.links-style {
+  color: white;
+  text-decoration: underline;
+  /* cursor: inherit; */
 }
 
 /* ==========================================================================
