@@ -1,15 +1,18 @@
 
 
+$(document).ready(function(){
 
 
-function getTwitLinks(){
-    document.getElementById("twitter-links").classList.toggle("to-reveal");
-}
+    $('#Twitter-icon').click(function(){
+        $('#Twitter-links').toggle('slow');
+    });
 
-function getGitLinks(){
-    document.getElementById("git-links").classList.toggle("to-reveal");
-}
+    $('#Git-icon').click(function(){
+        $('#Git-links').toggle('slow');
+    });
 
-function getLinkedinLinks(){
-    document.getElementById("linkedin-links").classList.toggle("to-reveal");
-}
+    $('#Linkedin-icon').click(function(){
+        $('#Linkedin-links').toggle('slow');
+    });
+
+});
