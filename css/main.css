@@ -190,6 +190,15 @@ textarea {
     }
   }
 /* ------------------ Hugo ------------------------ */
+
+nav form {
+  margin-top: .5em;
+}
+
+.navbar-toggler {
+  margin-top: .5em;
+}
+
 /* -----------Estimation------------------------*/
 
 #inputSurface, #room, #material, #price-box{
