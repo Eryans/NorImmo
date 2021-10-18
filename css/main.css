@@ -87,23 +87,16 @@ textarea {
    Author's custom styles
    ========================================================================== */
   
-   .form-control:focus{
+  .form-control:focus{
     box-shadow: none;
     border: 1px solid #d8dde2;
   }
-
-   #test, #messageCount, #phoneError{
-    height: 1vh;
+  #firstNameTxt, #lastNameTxt, #phoneError, #messageCount{
+    height: 2vh;
     margin-bottom: 1em;
-    font-size: small;
+    font-size: x-small;
     color: red;
    }
-   #test, #messageCount{
-    border: 1px solid black;
-    background-color: coral;
-    height: 100px;
-    margin-top: 1em;
-  } 
   /* --------------- Jules CSS---------------------*/
   #textDescription{
     background-color: rgba(0,0,0,0.5);
@@ -147,6 +140,10 @@ textarea {
 
 .to-reveal {
   display: none;
+}
+
+footer { /* FOOTER GLOBAL CSS */
+  font-size: 69%;
 }
 
 /* ==========================================================================
